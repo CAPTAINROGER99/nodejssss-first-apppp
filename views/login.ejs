@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+    <main>
+        <form method="post" action="/login"> 
+            <h1>Login Now</h1>
+
+         <!---   <input type="text" name = "name" placeholder="Name" /> -->
+
+
+            <!--<input type="email" name = "email" placeholder="ABC@example.com" />-->
+
+
+
+            <input type="email" name = "email" placeholder="ABC@example.com" value="<%=locals.email%>" />       <!--if we want to render the email even after the password is incorrect-->
+            <input type="password" name = "Password" placeholder="Password" />
+            <p class="error">   <%= locals.message %>   </p>        <!--ALWAYS REMEMBER TO USE locals.whatever to get the variable in the page-->
+
+            <button type = "Sumbit"> Login IN </button> 
+
+        </form>
+    </main>
+</body>
+</html>
